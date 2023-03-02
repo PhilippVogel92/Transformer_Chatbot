@@ -1,6 +1,6 @@
 ## Transformer Chatbot
 
-_Authors: Ben Kräling, Philipp Vogel_ <br>
+_Authors: Philipp Vogel, Ben Kräling_ <br>
 Dataset preparation model and interface for a transformer based chatbot in TensorFlow and Keras.
 
 ### Setup
