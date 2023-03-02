@@ -33,7 +33,7 @@ model = transformer.transformer(
 
 path = f"./models/{EPOCHS}EPOCHS_{NUM_LAYERS}LAYERS_{NUM_HEADS}HEADS_{UNITS}UNITS_{D_MODEL}DMODEL_{MAX_LENGTH}MAXLENGTH_{BATCH_SIZE}BATCHSIZE"
 
-model.load_weights(f"{path}/best_model")
+model.load_weights("chatbot_model/best_model")
 
 
 def testing():
@@ -49,10 +49,10 @@ def testing():
                       ]
 
     for index, question in enumerate(mock_questions):
-        df.loc[index] = question, transformer.predict(question, path)
+        df.loc[index] = question, transformer.predict(question)
 
     df.to_csv(
-        f'./testing_results/bot_convo_{EPOCHS}EPOCHS_{NUM_LAYERS}LAYERS_{NUM_HEADS}HEADS_{UNITS}UNITS_{D_MODEL}DMODEL_{MAX_LENGTH}MAXLENGTH_{BATCH_SIZE}BATCHSIZE.csv')
+        f'./testing_results/bot_convo_{EPOCHS}EPOCHS_{NUM_LAYERS}LAYERS_{NUM_HEADS}HEADS_{UNITS}UNITS_{D_MODEL}DMODEL_{MAX_LENGTH}MAXLENGTH_{BATCH_SIZE}BATCHSIZE_test.csv')
 
 
 testing()
