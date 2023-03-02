@@ -4,3 +4,4 @@ tokenizer.subwords
 ipynb_checkpoints/
 logs/
 chatbot_model/
+__pycache__
